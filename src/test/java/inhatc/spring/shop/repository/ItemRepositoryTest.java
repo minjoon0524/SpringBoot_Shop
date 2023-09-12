@@ -2,6 +2,7 @@ package inhatc.spring.shop.repository;
 
 import inhatc.spring.shop.constant.ItemSellStatus;
 import inhatc.spring.shop.entity.Item;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.time.LocalDateTime;
 
 @SpringBootTest
+//@Transactional
 class ItemRepositoryTest {
 
     @Autowired
