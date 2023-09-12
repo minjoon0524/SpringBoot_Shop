@@ -1,7 +1,12 @@
 package inhatc.spring.shop.entity;
 
+import inhatc.spring.shop.constant.ItemSellStatus;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -29,9 +34,11 @@ public class Item {
     @Column(nullable = false)
     private String itemDetail;   // 상품 상세 설명
 
-   /* @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     private ItemSellStatus itemSellStatus;
 
-    private LocalDateTime regTime;      // 등록일 (추후 제거)
-    private LocalDateTime updateTime;*/   // 수정일 (추후 제거)
+//    @CreatedDate
+    private LocalDateTime regTime;      // 등록시간
+//    @LastModifiedDate
+    private LocalDateTime updateTime;   // 수정시간
 }
