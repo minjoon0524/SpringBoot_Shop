@@ -3,8 +3,6 @@ package inhatc.spring.shop.entity;
 import inhatc.spring.shop.constant.ItemSellStatus;
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.LocalDateTime;
 
