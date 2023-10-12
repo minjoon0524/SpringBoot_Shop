@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}"
+>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Hello</title>
-</head>
-<body>
-<h1>스프링부트 1장 수업중</h1>
-</body>
+
+<div layout:fragment="content">본문 영역 입니다.  </div>
 </html>

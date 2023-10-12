@@ -77,7 +77,7 @@ class ItemRepositoryTest {
     @DisplayName("querydsl 테스트2")
     public void querydslTest2(){
         createItemList2();
-        BooleanBuilder builder=new BooleanBuilder();
+        BooleanBuilder builder=new BooleanBuilder(); // 있을 수도 있고 없을 수도 있다.
         QItem item = QItem.item;
 
         String itemDetail="테스트";
