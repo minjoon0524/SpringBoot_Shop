@@ -41,6 +41,15 @@ spring:
         format_sql: true     # 포멧 처리해서 보이기
     database-platform: org.hibernate.dialect.MySQL8Dialect  # MySQL8 버전 사용
 
+
+  ####################################
+  # Security User
+  ####################################
+  security:
+    user:
+      name: test@test.com
+      password: 1111
+
 ####################################
 # 로그 정보 설정
 ####################################
@@ -51,4 +60,3 @@ logging:
         type:
           descriptor:
             sql: trace  # 물음표에 바인드 파라미터 출력
-
