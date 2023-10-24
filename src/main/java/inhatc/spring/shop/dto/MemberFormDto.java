@@ -1,10 +1,14 @@
 package inhatc.spring.shop.dto;
 
+<<<<<<< HEAD
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
+=======
+import lombok.*;
+>>>>>>> origin/master
 
 @Getter
 @Setter
@@ -14,6 +18,7 @@ import org.hibernate.validator.constraints.Length;
 @Builder
 public class MemberFormDto {
 
+<<<<<<< HEAD
     @NotBlank(message = "이름은 필수입력 값입니다.")
     private String name;
 
@@ -26,6 +31,17 @@ public class MemberFormDto {
     private String password;
 
     @NotEmpty(message = "주소는 필수입력 값입니다.")
+=======
+    private String name;
+
+
+    private String email;
+
+
+    private String password;
+
+
+>>>>>>> origin/master
     private String address;
 
 }

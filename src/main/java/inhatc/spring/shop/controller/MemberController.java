@@ -3,6 +3,7 @@ package inhatc.spring.shop.controller;
 import inhatc.spring.shop.dto.MemberFormDto;
 import inhatc.spring.shop.entity.Member;
 import inhatc.spring.shop.service.MemberService;
+<<<<<<< HEAD
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -10,12 +11,21 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+=======
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+>>>>>>> origin/master
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 @RequiredArgsConstructor
+<<<<<<< HEAD
 @Slf4j
+=======
+>>>>>>> origin/master
 public class MemberController {
     private final MemberService memberService;
     private final PasswordEncoder passwordEncoder;
@@ -27,6 +37,7 @@ public class MemberController {
         return "member/memberForm";
     }
 
+<<<<<<< HEAD
     @PostMapping(value = "/member/new")
     public String saveMember(@Valid MemberFormDto memberFormDto,
                              BindingResult bindingResult, Model model) {
@@ -51,4 +62,14 @@ public class MemberController {
     public String loginForm(){
         return "member/memberLoginForm";
     }
+=======
+//    @PostMapping("/member/new")
+//        public String insertMember(MemberFormDto memberFormDto){
+//            Member member=Member.createMember(memberFormDto,passwordEncoder);
+//        Member m = memberService.saveMember(member);
+//
+//        return "";
+//        }
+
+>>>>>>> origin/master
 }

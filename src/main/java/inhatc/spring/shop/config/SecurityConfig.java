@@ -1,6 +1,9 @@
 package inhatc.spring.shop.config;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -17,6 +20,7 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+<<<<<<< HEAD
 
         http.formLogin((form) -> form
                 .loginPage("/member/login")
@@ -35,6 +39,10 @@ public class SecurityConfig {
         http.logout(Customizer.withDefaults());
 
 
+=======
+        http.formLogin(Customizer.withDefaults());
+        http.logout(Customizer.withDefaults());
+>>>>>>> origin/master
         return http.build();
     }
     @Bean
