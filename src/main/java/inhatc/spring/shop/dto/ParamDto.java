@@ -10,5 +10,5 @@ import lombok.*;
 @Builder
 public class ParamDto {
     private String name;
-    private int age=10;
+    private int age ;
 }

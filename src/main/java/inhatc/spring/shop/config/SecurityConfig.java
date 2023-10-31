@@ -29,12 +29,15 @@ public class SecurityConfig {
         http.authorizeHttpRequests(request->request
                 .requestMatchers("css/**").permitAll()
                 .requestMatchers("/","/member/**").permitAll()
-                .anyRequest().authenticated()
-        );
+                .requestMatchers("/admin/**").hasRole("ADMIN")
+                .anyRequest().authenticated());
+
+        // 권한 없는 경우에 대한 예외 처리
+        http.exceptionHandling(exception -> exception
+                .authenticationEntryPoint(new CustomAuthenticationEntryPoint()));
+
 
         http.logout(Customizer.withDefaults());
-
-
 
         http.formLogin(Customizer.withDefaults());
         http.logout(Customizer.withDefaults());
