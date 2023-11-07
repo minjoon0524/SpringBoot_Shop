@@ -19,15 +19,12 @@ public class Member {
     @Column(name="member_id")
     private Long id;
 
-
     private String name;
 
     @Column(unique = true)
     private String email;
 
-
     private String password;
-
 
     private String address;
 
