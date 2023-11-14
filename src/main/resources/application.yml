@@ -49,7 +49,13 @@ spring:
     user:
       name: test@test.com
       password: 1111
+  servlet:
+    multipart:
+      max-file-size: 10MB         # 파일 업로드 최대 크기
+      max-request-size: 100MB      # 파일 업로드 최대 크기
 
+  itemImgLocation: C:/Spring_WS/C_Ban/shop
+  uploadPath: file///c:/Spring_WS/C_Ban/shop/
 ####################################
 # 로그 정보 설정
 ####################################
@@ -60,3 +66,4 @@ logging:
         type:
           descriptor:
             sql: trace  # 물음표에 바인드 파라미터 출력
+
