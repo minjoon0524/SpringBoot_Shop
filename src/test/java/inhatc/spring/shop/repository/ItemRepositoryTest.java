@@ -16,7 +16,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.thymeleaf.util.StringUtils;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @SpringBootTest
@@ -25,7 +24,6 @@ class ItemRepositoryTest {
 
     @Autowired
     private ItemRepository itemRepository;
-
 
     @PersistenceContext
     EntityManager em;
@@ -38,8 +36,6 @@ class ItemRepositoryTest {
                     .itemDetail("테스트 상품 상세 설명"+i)
                     .itemSellStatus(ItemSellStatus.SELL)
                     .stockNumber(100+i)
-                    .regTime(LocalDateTime.now())
-                    .updateTime(LocalDateTime.now())
                     .build();
             itemRepository.save(item);
         }
@@ -53,8 +49,6 @@ class ItemRepositoryTest {
                     .itemDetail("테스트 상품 상세 설명"+i)
                     .itemSellStatus(ItemSellStatus.SELL)
                     .stockNumber(100+i)
-                    .regTime(LocalDateTime.now())
-                    .updateTime(LocalDateTime.now())
                     .build();
             itemRepository.save(item);
         }
@@ -66,8 +60,7 @@ class ItemRepositoryTest {
                     .itemDetail("테스트 상품 상세 설명"+i)
                     .itemSellStatus(ItemSellStatus.SOLD_OUT)
                     .stockNumber(100+i)
-                    .regTime(LocalDateTime.now())
-                    .updateTime(LocalDateTime.now())
+
                     .build();
             itemRepository.save(item);
         }
@@ -239,8 +232,6 @@ class ItemRepositoryTest {
                 .itemDetail("테스트 상품 상세 설명")
                 .itemSellStatus(ItemSellStatus.SELL)
                 .stockNumber(100)
-                .regTime(LocalDateTime.now())
-                .updateTime(LocalDateTime.now())
                 .build();
 
         System.out.println("==============================================Item : "+item);
