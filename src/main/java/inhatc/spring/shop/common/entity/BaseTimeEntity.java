@@ -1,6 +1,5 @@
 package inhatc.spring.shop.common.entity;
 
-import inhatc.spring.shop.config.AuditorAwareImpl;
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
