@@ -1,5 +1,6 @@
 package inhatc.spring.shop.entity;
 
+import inhatc.spring.shop.common.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,7 +11,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ItemImg {
+public class ItemImg extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="item_img_id")
